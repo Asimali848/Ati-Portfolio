@@ -1,0 +1,115 @@
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+
+export function Hero() {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  return (
+    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-50 via-blue-50 to-white dark:from-emerald-950/20 dark:via-blue-950/20 dark:to-background">
+      <div className="container mx-auto px-4 py-20">
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Profile Image */}
+          <div className="mb-8">
+            <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-emerald-400 to-blue-500">
+              <img
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+                alt="Muhammad Atif"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+
+          {/* Status Badge */}
+          <Badge
+            variant="secondary"
+            className="mb-6 bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800"
+          >
+            Available for new opportunities
+          </Badge>
+
+          {/* Main Heading */}
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-emerald-600 via-blue-600 to-purple-600 bg-clip-text text-transparent animate-in slide-in-from-bottom-4 duration-1000">
+            Muhammad Atif
+          </h1>
+
+          {/* Subtitle */}
+          <h2 className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-8 animate-in slide-in-from-bottom-5 duration-1000 delay-200">
+            Backend Developer & Ai Engineer
+          </h2>
+
+          {/* Description */}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-in slide-in-from-bottom-6 duration-1000 delay-400">
+            Passionate about building intelligent systems and robust backend
+            architectures that power seamless digital experiences. Specializing
+            in AI-driven solutions, scalable APIs, and modern server-side
+            technologies with a focus on performance, security, and real-world
+            impact.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-in slide-in-from-bottom-7 duration-1000 delay-600">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-emerald-500 to-blue-500 hover:from-emerald-600 hover:to-blue-600 text-white px-8 py-3 text-lg"
+              onClick={() => scrollToSection("projects")}
+            >
+              View My Work
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="border-2 px-8 py-3 text-lg"
+              onClick={() => scrollToSection("contact")}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Get In Touch
+            </Button>
+          </div>
+
+          {/* Social Links */}
+          <div className="flex justify-center space-x-6 mb-12 animate-in slide-in-from-bottom-8 duration-1000 delay-800">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-12 w-12 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900"
+            >
+              <Github className="w-6 h-6" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-12 w-12 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900"
+            >
+              <Linkedin className="w-6 h-6" />
+            </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              className="h-12 w-12 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900"
+            >
+              <Download className="w-6 h-6" />
+            </Button>
+          </div>
+
+          {/* Scroll Indicator */}
+          <div className="animate-bounce">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => scrollToSection("about")}
+              className="rounded-full h-12 w-12"
+            >
+              <ArrowDown className="w-6 h-6" />
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
