@@ -38,11 +38,11 @@ const education = [
     gpa: "3.2/4.0",
   },
   {
-    degree: "Pre Engineering",
+    degree: "FSC",
     school: "Punjab Group of Colleges",
     location: "Okara, Pakistan",
     duration: "2017 - 2019",
-    gpa: "78%",
+    gpa: "80%",
   },
 ];
 
