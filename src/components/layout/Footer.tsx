@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { Code, Heart, Coffee, Github, Linkedin, Twitter, Mail, ArrowUp } from 'lucide-react';
+import { Code, Heart, Coffee, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 const quickLinks = [
   { href: '#about', label: 'About' },
@@ -11,10 +11,9 @@ const quickLinks = [
 ];
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/muhammadatif', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammadatiflodhi/', label: 'LinkedIn' },
-  { icon: Twitter, href: 'https://twitter.com/muhammadatif', label: 'Twitter' },
-  { icon: Mail, href: 'mailto:muhammad.atif@email.com', label: 'Email' }
+  { icon: Github, href: 'https://github.com/MuhammadAtif03', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammad-atif-lodhi-39a0911a1/', label: 'LinkedIn' },
+  { icon: Mail, href: 'mailto:atiflodhi926@gmail.com', label: 'Email' }
 ];
 
 export function Footer() {
@@ -114,7 +113,7 @@ export function Footer() {
             <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             <span>and</span>
             <Coffee className="w-4 h-4 text-amber-600" />
-            <span>in San Francisco</span>
+            <span>in Lahore, Pakistan</span>
           </div>
 
           <Button

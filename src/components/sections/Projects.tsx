@@ -167,6 +167,10 @@ export function Projects() {
 
   const featuredProjects = projects.filter((project) => project.featured);
 
+  const gitview = (url: string) => {
+    window.open(url, "https://github.com/MuhammadAtif03");
+  };
+
   return (
     <section id="projects" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -351,7 +355,7 @@ export function Projects() {
             <p className="text-muted-foreground mb-4">
               Interested in seeing more of my work?
             </p>
-            <Button variant="outline" size="lg" className="border-2">
+            <Button onClick={() => gitview("https://github.com/MuhammadAtif03")} variant="outline" size="lg" className="border-2">
               <Github className="w-5 h-5 mr-2" />
               View All Projects on GitHub
             </Button>

@@ -83,9 +83,9 @@ export function About() {
               <div className="relative">
                 <div className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-emerald-400 to-blue-500 p-1">
                   <img
-                    src="https://preview.redd.it/i-finally-figured-out-what-i-didnt-like-about-superman-in-v0-zgeemq4p90ce1.jpeg?width=640&crop=smart&auto=webp&s=d51af834239b35339a88194a9978ccd9fa394af1"
+                    src="https://media.licdn.com/dms/image/v2/D4D03AQGVzV7T2gYBXw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715939453557?e=1756944000&v=beta&t=eqqR67110K8Nwc9UmBSeMZfM2j6H0IiFsJ0FQmNMHbY"
                     alt="Muhammad Atif working"
-                    className=" object-cover rounded-xl"
+                    className="w-full h-full object-cover rounded-xl"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg">
@@ -105,7 +105,7 @@ export function About() {
                   LLMs and RAG systems.
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  I’ve contributed to both freelance and full-time projects,
+                  I've contributed to both freelance and full-time projects,
                   creating impactful solutions like toxic comment detection
                   using XLNet and automated customer CRM workflows with VAPI and
                   n8n. My strength lies in transforming complex data into
@@ -161,7 +161,7 @@ export function About() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-emerald-950/50 dark:to-blue-950/50 rounded-lg">
-                  <div className="text-2xl font-bold text-emerald-600">5+</div>
+                  <div className="text-2xl font-bold text-emerald-600">10+</div>
                   <div className="text-sm text-muted-foreground">Projects</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-emerald-50 to-blue-50 dark:from-emerald-950/50 dark:to-blue-950/50 rounded-lg">

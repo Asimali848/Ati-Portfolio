@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+
+const socialLinks = [
+  { icon: Github, href: "https://github.com/MuhammadAtif03", label: "GitHub" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/muhammad-atif-lodhi-39a0911a1/",
+    label: "LinkedIn",
+  },
+  { icon: Mail, href: "mailto:atiflodhi926@gmail.com", label: "Email" },
+];
 
 export function Hero() {
   const scrollToSection = (sectionId: string) => {
@@ -18,7 +28,7 @@ export function Hero() {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden border-4 border-white shadow-xl bg-gradient-to-br from-emerald-400 to-blue-500">
               <img
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop"
+                src="https://media.licdn.com/dms/image/v2/D4D03AQGVzV7T2gYBXw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715939453557?e=1756944000&v=beta&t=eqqR67110K8Nwc9UmBSeMZfM2j6H0IiFsJ0FQmNMHbY"
                 alt="Muhammad Atif"
                 className="w-full h-full object-cover"
               />
@@ -74,27 +84,26 @@ export function Hero() {
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-12 animate-in slide-in-from-bottom-8 duration-1000 delay-800">
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-12 w-12 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900"
-            >
-              <Github className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-12 w-12 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900"
-            >
-              <Linkedin className="w-6 h-6" />
-            </Button>
-            <Button
-              variant="ghost"
-              size="icon"
-              className="h-12 w-12 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900"
-            >
-              <Download className="w-6 h-6" />
-            </Button>
+            <div className="flex space-x-3">
+              {socialLinks.map((social, index) => (
+                <Button
+                  key={index}
+                  variant="ghost"
+                  size="icon"
+                  className="h-10 w-10 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900 transition-colors"
+                  asChild
+                >
+                  <a
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.label}
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                </Button>
+              ))}
+            </div>
           </div>
 
           {/* Scroll Indicator */}
