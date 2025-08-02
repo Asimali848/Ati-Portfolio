@@ -35,7 +35,7 @@ const education = [
     school: "Gift University",
     location: "Gujjrawala, Pakistan",
     duration: "2019 - 2023",
-    gpa: "3.2/4.0",
+    gpa: "3.52/4.0",
   },
   {
     degree: "FSC",
